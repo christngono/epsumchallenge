@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Palette Nguedi JM Éditions ── */
+  --color-yellow:       #F5C518;
+  --color-yellow-dark:  #DBA900;
+  --color-blue-logo:    #1A3DAA;
+  --color-blue-dark:    #0E2A88;
+  --color-beige:        #F5E2CC;
+  --color-dark-red:     #7D1E1E;
+  --color-dark-green:   #2D5A3D;
+  --color-red-svc:      #C0392B;
+  --color-gold-svc:     #8B7A1A;
+  --color-indigo:       #3D3B8E;
+  --color-purple:       #6B5B9A;
+  --color-lavender:     #C4B5D5;
+  --color-dark-footer:  #1C1C2E;
+
+  /* ── Typographie ── */
+  --font-sans:    var(--font-montserrat);
+  --font-display: var(--font-playfair);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  color: #1A1A1A;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ── Motif africain en fond global ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url('/images/motifafricain.jpg');
+  background-repeat: repeat;
+  background-size: 280px 280px;
+  opacity: 0.035;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Sections au-dessus du motif ── */
+main, header, nav, footer, section {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Scrollbar discrète ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f5e2cc; }
+::-webkit-scrollbar-thumb { background: #1A3DAA; border-radius: 3px; }
