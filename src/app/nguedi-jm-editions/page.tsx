@@ -137,7 +137,7 @@ export default function NguediJmEditionsPage() {
       </section>
 
       {/* ── Epsum Challenge ── */}
-      <section className="bg-[#1C1C2E] py-16 px-6 md:px-12">
+      <section className="section-dark-tribal bg-[#1C1C2E] py-16 px-6 md:px-12">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="flex-shrink-0 w-[200px]">
             <Image

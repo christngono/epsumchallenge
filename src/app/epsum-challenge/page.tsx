@@ -39,7 +39,7 @@ export default function EpsumChallengePage() {
   return (
     <>
       {/* ── Hero banner ── */}
-      <section className="relative bg-[#1C1C2E] min-h-[420px] flex items-center overflow-hidden">
+      <section className="section-dark-tribal relative bg-[#1C1C2E] min-h-[420px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/hero_for_epsumchallenge.png"
@@ -152,7 +152,7 @@ export default function EpsumChallengePage() {
       </section>
 
       {/* ── Comment ça marche ── */}
-      <section className="bg-[#1C1C2E] py-16 px-6 md:px-12">
+      <section className="section-dark-tribal bg-[#1C1C2E] py-16 px-6 md:px-12">
         <div className="max-w-5xl mx-auto">
           <h2
             className="text-white text-3xl font-bold text-center mb-12"

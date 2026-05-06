@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1C1C2E] text-white relative overflow-hidden">
+    <footer className="section-dark-tribal bg-[#1C1C2E] text-white relative overflow-hidden">
 
       {/* Vague supérieure */}
       <div className="leading-none">
