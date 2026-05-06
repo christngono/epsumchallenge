@@ -89,3 +89,47 @@ main, header, nav, footer, section {
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #f5e2cc; }
 ::-webkit-scrollbar-thumb { background: #1A3DAA; border-radius: 3px; }
+
+/* ── Transition de pages : vagues de livres ── */
+.page-transition-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  visibility: hidden;
+}
+
+.page-transition-overlay.active {
+  visibility: visible;
+  animation: overlayBg 1.75s ease-in-out forwards;
+}
+
+@keyframes overlayBg {
+  0%   { background: transparent; }
+  18%  { background: rgba(28, 28, 46, 0.88); }
+  78%  { background: rgba(28, 28, 46, 0.88); }
+  100% { background: transparent; }
+}
+
+.book-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  padding: 3px;
+}
+
+.page-transition-overlay.active .book-icon {
+  animation: bookWave 0.88s ease-in-out forwards;
+}
+
+@keyframes bookWave {
+  0%   { opacity: 0; transform: scale(0) rotate(-22deg); }
+  38%  { opacity: 1; transform: scale(1.15) rotate(5deg); }
+  62%  { opacity: 1; transform: scale(1)    rotate(0deg); }
+  100% { opacity: 0; transform: scale(0)    rotate(22deg); }
+}

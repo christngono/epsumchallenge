@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="section-dark-tribal relative bg-[#1C1C2E] overflow-hidden min-h-[480px] flex items-center">
+    <section className="relative bg-[#1C1C2E] overflow-hidden min-h-[480px] flex items-center">
 
       {/* Image de fond hero */}
       <div className="absolute inset-0">
@@ -11,11 +11,11 @@ export default function Hero() {
           src="/images/hero_for_epsumchallenge.png"
           alt="Epsum Challenge"
           fill
-          className="object-cover object-center opacity-40"
+          className="object-cover object-center opacity-60"
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1C1C2E]/90 via-[#1C1C2E]/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1C1C2E]/85 via-[#1C1C2E]/50 to-transparent" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-20">

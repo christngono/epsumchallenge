@@ -87,36 +87,30 @@ export default function EpsumChallengePage() {
 
           <div className="flex-1">
             <p className="text-[10px] font-bold tracking-[4px] text-[#1A3DAA] uppercase mb-2">
-              Jeu de société · Culture africaine
+              Jeu de société · Patrimoine camerounais
             </p>
             <h2
               className="text-3xl md:text-4xl text-[#1C1C2E] font-bold leading-snug mb-4"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
-              Epsum Challenge
+              EPSUM Challenge : Bien plus qu&apos;un jeu, un voyage au cœur de notre identité !
             </h2>
             <p className="text-[15px] leading-relaxed text-[#444] mb-4">
-              Epsum Challenge est le premier jeu de culture générale 100% africaine.
-              Conçu pour toute la famille, il propose plus de <strong>500 questions</strong> sur
-              l&apos;histoire, la géographie, la culture, le sport et les personnalités du continent.
+              Plongez dans l&apos;univers captivant d&apos;EPSUM Challenge, le premier jeu de société qui transforme
+              l&apos;histoire de Yaoundé en une aventure épique. Pourquoi EPSUM ? Parce que nous croyons que pour
+              bâtir l&apos;avenir, il faut d&apos;abord connaître ses racines.
             </p>
-            <p className="text-[15px] leading-relaxed text-[#444] mb-8">
-              Un outil ludique et éducatif qui valorise le patrimoine africain et renforce
-              le sentiment d&apos;appartenance culturelle, idéal pour les écoles, les familles
-              et les événements culturels.
+            <p className="text-[15px] leading-relaxed text-[#444] mb-4">
+              Ce jeu a été conçu pour reconnecter les générations à leur patrimoine, en mettant en lumière les
+              héros oubliés et les lieux emblématiques de notre capitale à travers une mécanique stratégique de
+              <strong> cartes et de Koris</strong>. Accompagné d&apos;une bande dessinée dynamique où un jeune homme et
+              une historienne parcourent la ville, EPSUM Challenge répond à un besoin essentiel : apprendre en
+              s&apos;amusant, valoriser notre culture locale et renforcer les liens familiaux autour d&apos;un récit
+              qui nous ressemble.
             </p>
-            <ul className="flex flex-col gap-2 mb-8">
-              {["2 à 6 joueurs", "Dès 10 ans", "+500 questions", "6 catégories thématiques"].map((f) => (
-                <li key={f} className="flex items-center gap-2 text-sm text-gray-700">
-                  <span className="w-5 h-5 rounded-full bg-[#F5C518] flex items-center justify-center flex-shrink-0">
-                    <svg viewBox="0 0 12 12" width="10" height="10" fill="none" stroke="#1C1C2E" strokeWidth="2" strokeLinecap="round">
-                      <polyline points="2,6 5,9 10,3" />
-                    </svg>
-                  </span>
-                  {f}
-                </li>
-              ))}
-            </ul>
+            <p className="text-[15px] leading-relaxed text-[#444] mb-8 font-medium text-[#1C1C2E]">
+              Relevez le défi et devenez, vous aussi, un gardien de l&apos;histoire de la cité aux sept collines !
+            </p>
             <div className="flex items-center gap-6 flex-wrap">
               <span className="text-3xl font-black text-[#7D1E1E]">12 500 F CFA</span>
               <Link
