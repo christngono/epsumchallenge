@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "motion/react";
 
 export default function Newsletter() {
   const [sent, setSent] = useState(false);
@@ -31,15 +32,18 @@ export default function Newsletter() {
 
       <div className="relative z-10 max-w-5xl mx-auto flex flex-col sm:flex-row items-center gap-12 flex-wrap">
 
-        <div
+        <motion.div
           className="bg-[#1A3DAA] text-white px-6 py-5 text-[12.5px] font-bold leading-[1.75] tracking-[0.5px] min-w-[250px]"
-          style={{ transform: "rotate(-2deg)" }}
+          initial={{ opacity: 0, rotate: -8, x: -20 }}
+          whileInView={{ opacity: 1, rotate: -2, x: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
           INSCRIVEZ-VOUS À LA<br />
           NEWSLETTER POUR<br />
           RECEVOIR TOUTES NOS<br />
           ACTUALITÉS
-        </div>
+        </motion.div>
 
         <form onSubmit={handleSubmit} className="flex flex-1 max-w-[520px]">
           <input

@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { SERVICES } from "@/lib/data";
+import { SERVICES, EDITIONS } from "@/lib/data";
+import Reveal from "@/components/motion/Reveal";
+import { Stagger, StaggerItem } from "@/components/motion/Stagger";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -45,30 +47,31 @@ export default function NosServicesPage() {
     <>
       {/* ── En-tête ── */}
       <section className="bg-[#faf6f1] border-b border-[#ebe0d5] py-16 px-6 md:px-12 text-center">
-        <p className="text-[10px] font-bold tracking-[4px] text-[#1A3DAA] uppercase mb-3">
-          Expertise éditoriale
-        </p>
-        <h1
-          className="text-4xl md:text-5xl text-[#1C1C2E] font-bold mb-5"
-          style={{ fontFamily: "var(--font-playfair)" }}
-        >
-          Nos Services
-        </h1>
-        <p className="text-[15px] leading-relaxed text-[#444] max-w-xl mx-auto">
-          Nguedi JM Éditions accompagne les auteurs à chaque étape de leur projet littéraire,
-          de l&apos;idée à la publication.
-        </p>
+        <Reveal>
+          <p className="text-[10px] font-bold tracking-[4px] text-[#1A3DAA] uppercase mb-3">
+            Expertise éditoriale
+          </p>
+          <h1
+            className="text-4xl md:text-5xl text-[#1C1C2E] font-bold mb-5"
+            style={{ fontFamily: "var(--font-playfair)" }}
+          >
+            Nos Services
+          </h1>
+          <p className="text-[15px] leading-relaxed text-[#444] max-w-2xl mx-auto">
+            {EDITIONS.support}
+          </p>
+        </Reveal>
       </section>
 
       {/* ── Grille services ── */}
       <section className="bg-white py-16 px-6 md:px-12">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <Stagger className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8" stagger={0.1}>
           {SERVICES.map((svc) => {
             const detail = SERVICE_DETAILS[svc.id];
             return (
-              <div
+              <StaggerItem
                 key={svc.id}
-                className="border border-[#ebe0d5] rounded-lg p-8 hover:shadow-lg transition-shadow"
+                className="border border-[#ebe0d5] rounded-lg p-8 hover:shadow-lg hover:border-[#F5C518] transition-all bg-white"
               >
                 <div className="flex items-center gap-4 mb-5">
                   <div
@@ -96,26 +99,28 @@ export default function NosServicesPage() {
                     ))}
                   </ul>
                 )}
-              </div>
+              </StaggerItem>
             );
           })}
-        </div>
+        </Stagger>
       </section>
 
       {/* ── CTA ── */}
       <section className="bg-[#F5E2CC] py-14 px-6 md:px-12 text-center">
-        <h2 className="text-2xl font-black text-[#1C1C2E] mb-4">
-          Un projet en tête ?
-        </h2>
-        <p className="text-sm text-gray-600 mb-8 max-w-md mx-auto">
-          Contactez-nous pour discuter de votre manuscrit et obtenir un devis personnalisé.
-        </p>
-        <Link
-          href="/contact"
-          className="inline-block bg-[#1A3DAA] hover:bg-[#0E2A88] text-white font-bold text-xs tracking-widest px-10 py-4 rounded-full transition-colors"
-        >
-          NOUS CONTACTER
-        </Link>
+        <Reveal>
+          <h2 className="text-2xl font-black text-[#1C1C2E] mb-4">
+            Un projet en tête ?
+          </h2>
+          <p className="text-sm text-gray-600 mb-8 max-w-md mx-auto">
+            Contactez-nous pour discuter de votre manuscrit et obtenir un devis personnalisé.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-block bg-[#1A3DAA] hover:bg-[#0E2A88] text-white font-bold text-xs tracking-widest px-10 py-4 rounded-full transition-all hover:scale-[1.04]"
+          >
+            NOUS CONTACTER
+          </Link>
+        </Reveal>
       </section>
     </>
   );

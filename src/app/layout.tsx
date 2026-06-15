@@ -5,6 +5,7 @@ import Header from "@/components/layout/Header";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageTransition from "@/components/layout/PageTransition";
+import SmoothScroll from "@/components/motion/SmoothScroll";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -31,12 +32,14 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${montserrat.variable} ${playfair.variable}`}>
       <body className="min-h-screen flex flex-col">
-        <PageTransition>
-          <Header />
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </PageTransition>
+        <SmoothScroll>
+          <PageTransition>
+            <Header />
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </PageTransition>
+        </SmoothScroll>
       </body>
     </html>
   );

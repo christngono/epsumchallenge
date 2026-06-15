@@ -1,32 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Book } from "@/lib/data";
+import BookCover from "./BookCover";
+import TiltCard from "@/components/motion/TiltCard";
 
-interface BookCardProps {
-  title: string;
-  author: string;
-  image: string;
-  slug: string;
-  decorative?: "roman" | "collection";
-}
-
-export function BookCard({ title, author, image, slug }: BookCardProps) {
+export function BookCard({ book }: { book: Book }) {
   return (
-    <Link
-      href={`/nos-livres/${slug}`}
-      className="relative block h-[320px] rounded-sm overflow-hidden cursor-pointer group bg-[#f0f0f0]"
-    >
-      <Image
-        src={image}
-        alt={title}
-        fill
-        className="object-cover object-top transition-transform duration-[350ms] group-hover:scale-[1.04]"
-        sizes="(max-width: 560px) 85vw, (max-width: 900px) 50vw, 25vw"
-      />
-      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3.5 pb-3.5 pt-7 translate-y-full transition-transform duration-300 group-hover:translate-y-0">
-        <p className="text-[10px] text-white/80 font-semibold tracking-widest uppercase mb-1">{author}</p>
-        <p className="text-sm text-white font-extrabold leading-snug">{title}</p>
-      </div>
-    </Link>
+    <TiltCard className="h-[320px]">
+      <Link
+        href={`/nos-livres/${book.slug}`}
+        className="relative block h-full rounded-sm overflow-hidden cursor-pointer group bg-[#f0f0f0] shadow-lg"
+      >
+        <div className="absolute inset-0 transition-transform duration-[450ms] group-hover:scale-[1.05]">
+          <BookCover book={book} sizes="(max-width: 560px) 85vw, (max-width: 900px) 50vw, 25vw" />
+        </div>
+        {book.image && (
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent px-3.5 pb-3.5 pt-7 translate-y-full transition-transform duration-300 group-hover:translate-y-0">
+            <p className="text-[10px] text-white/80 font-semibold tracking-widest uppercase mb-1">{book.author}</p>
+            <p className="text-sm text-white font-extrabold leading-snug">{book.title}</p>
+          </div>
+        )}
+      </Link>
+    </TiltCard>
   );
 }
 
@@ -53,7 +48,7 @@ export function BookCardCollection() {
         src="/images/tous_les livres.png"
         alt="Collection Grégoire Nguédi"
         fill
-        className="object-cover object-center"
+        className="object-cover object-center transition-transform duration-[450ms] group-hover:scale-105"
         sizes="25vw"
       />
       <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#640a0a]/90 to-transparent px-3.5 pb-3.5 pt-7">

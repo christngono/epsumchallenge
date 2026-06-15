@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Reveal from "@/components/motion/Reveal";
 
 const SUBJECTS = [
   "Commander un livre",
@@ -27,26 +28,28 @@ export default function ContactPage() {
     <>
       {/* ── En-tête ── */}
       <section className="bg-[#faf6f1] border-b border-[#ebe0d5] py-16 px-6 md:px-12 text-center">
-        <p className="text-[10px] font-bold tracking-[4px] text-[#1A3DAA] uppercase mb-3">
-          On est à votre écoute
-        </p>
-        <h1
-          className="text-4xl md:text-5xl text-[#1C1C2E] font-bold mb-4"
-          style={{ fontFamily: "var(--font-playfair)" }}
-        >
-          Contactez-nous
-        </h1>
-        <p className="text-[15px] text-[#444] max-w-lg mx-auto">
-          Pour commander, poser une question ou discuter d&apos;un projet éditorial,
-          remplissez le formulaire ci-dessous.
-        </p>
+        <Reveal>
+          <p className="text-[10px] font-bold tracking-[4px] text-[#1A3DAA] uppercase mb-3">
+            On est à votre écoute
+          </p>
+          <h1
+            className="text-4xl md:text-5xl text-[#1C1C2E] font-bold mb-4"
+            style={{ fontFamily: "var(--font-playfair)" }}
+          >
+            Contactez-nous
+          </h1>
+          <p className="text-[15px] text-[#444] max-w-lg mx-auto">
+            Pour commander, poser une question ou discuter d&apos;un projet éditorial,
+            remplissez le formulaire ci-dessous.
+          </p>
+        </Reveal>
       </section>
 
       <section className="bg-white py-16 px-6 md:px-12">
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
 
           {/* ── Formulaire ── */}
-          <div>
+          <Reveal direction="right">
             <h2 className="text-xl font-bold text-[#1C1C2E] mb-6">Envoyer un message</h2>
             {sent ? (
               <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
@@ -118,10 +121,10 @@ export default function ContactPage() {
                 </button>
               </form>
             )}
-          </div>
+          </Reveal>
 
           {/* ── Coordonnées ── */}
-          <div>
+          <Reveal direction="left" delay={0.1}>
             <h2 className="text-xl font-bold text-[#1C1C2E] mb-6">Nos coordonnées</h2>
             <div className="flex flex-col gap-8">
 
@@ -198,7 +201,7 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
-          </div>
+          </Reveal>
 
         </div>
       </section>
