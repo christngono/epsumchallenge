@@ -5,29 +5,26 @@ import TwoCol from "@/components/sections/TwoCol";
 import Newsletter from "@/components/sections/Newsletter";
 import EcuSection from "@/components/sections/EcuSection";
 import Carousel from "@/components/ui/Carousel";
-import { BookCard, BookCardRoman, BookCardCollection } from "@/components/ui/BookCard";
+import Marquee from "@/components/ui/Marquee";
+import { BookCard } from "@/components/ui/BookCard";
 import ServiceCard from "@/components/ui/ServiceCard";
 import Reveal from "@/components/motion/Reveal";
 import { BOOKS, SERVICES } from "@/lib/data";
 
 export default function Home() {
-  const romans = BOOKS.filter((b) => b.genre === "Roman");
-
   return (
     <>
       <Hero />
 
-      {/* ── Carrousel Livres ── */}
-      <section className="bg-[#F5E2CC] px-3.5 py-8 flex items-center">
-        <Reveal className="w-full">
-          <Carousel visibleDesktop={4} visibleTablet={2} visibleMobile={1}>
-            {[
-              <BookCardRoman key="roman" />,
-              ...romans.map((book) => <BookCard key={book.slug} book={book} />),
-              <BookCardCollection key="collection" />,
-            ]}
-          </Carousel>
-        </Reveal>
+      {/* ── Défilement infini des livres (droite → gauche) ── */}
+      <section className="bg-[#F5E2CC] py-8">
+        <Marquee duration={45}>
+          {BOOKS.map((book) => (
+            <div key={book.slug} className="w-[210px]">
+              <BookCard book={book} />
+            </div>
+          ))}
+        </Marquee>
       </section>
 
       {/* ── Nouveau livre ── */}

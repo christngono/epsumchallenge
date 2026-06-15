@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
-import AnimatedText from "@/components/motion/AnimatedText";
 
 export default function Hero() {
   const reduce = useReducedMotion();
@@ -53,12 +52,15 @@ export default function Hero() {
           Nouveauté — Jeu de société éducatif
         </motion.p>
 
-        <h1 className="text-white text-4xl md:text-6xl font-black leading-tight mb-6 max-w-2xl">
-          <AnimatedText text="Epsum" immediate className="block" />
-          <span className="text-[#F5C518]">
-            <AnimatedText text="Challenge" immediate delay={0.25} className="block" />
-          </span>
-        </h1>
+        <motion.h1
+          className="text-white text-4xl md:text-6xl font-black leading-tight mb-6 max-w-2xl"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <span className="block hero-float">Epsum</span>
+          <span className="block hero-float-delayed hero-shine">Challenge</span>
+        </motion.h1>
 
         <motion.p
           className="text-white/80 text-base md:text-lg leading-relaxed mb-10 max-w-xl"

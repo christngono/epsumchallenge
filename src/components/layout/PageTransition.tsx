@@ -2,18 +2,14 @@
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 
-const COLS = 15
-const ROWS = 10
+const COLS = 8
+const ROWS = 5
 const BOOKS = Array.from({ length: COLS * ROWS }, (_, i) => i)
 
 function getDelay(i: number): number {
   const col = i % COLS
   const row = Math.floor(i / COLS)
-  return (col + row) * 32
-}
-
-function getSize(i: number): number {
-  return 52 + ((i * 41 + 17) % 34)
+  return (col + row) * 55
 }
 
 export default function PageTransition({ children }: { children: React.ReactNode }) {
@@ -44,12 +40,7 @@ export default function PageTransition({ children }: { children: React.ReactNode
             className="book-icon"
             style={{ animationDelay: `${getDelay(i)}ms` }}
           >
-            <img
-              src="/images/booksvg.svg"
-              alt=""
-              width={getSize(i)}
-              height={getSize(i)}
-            />
+            <img src="/images/booksvg.svg" alt="" />
           </div>
         ))}
       </div>
