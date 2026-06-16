@@ -49,7 +49,7 @@ export default function NewBookSection() {
             {NEW_BOOK_EXCERPT}
           </blockquote>
           <div className="flex items-center gap-6 flex-wrap">
-            <span className="text-2xl font-black text-[#7D1E1E]">10 000 F CFA</span>
+            <span className="text-2xl font-black text-[#7D1E1E]">20 000 F CFA</span>
             <Link
               href="/contact"
               className="inline-block bg-[#1A3DAA] hover:bg-[#0E2A88] text-white text-xs font-bold tracking-widest px-8 py-3.5 rounded-full transition-all hover:scale-[1.04]"

@@ -107,7 +107,7 @@ export const BOOKS: Book[] = [
     genre: "Essai",
     year: 2024,
     publisher: "Nguedi jm Éditions",
-    price: 10000,
+    price: 20000,
     preface: "Edou Alo'o Cyrill",
     postPreface: "Kongo Elanga Désiré",
     description:
