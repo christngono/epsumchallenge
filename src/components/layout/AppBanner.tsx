@@ -15,7 +15,7 @@ export default function AppBanner() {
 
   return (
     <motion.div
-      className="hidden md:flex items-center gap-3 relative overflow-hidden rounded-2xl bg-[#1C1C2E] pl-2 pr-3 py-2 border border-[#F5C518]/30"
+      className="flex items-center gap-2 md:gap-3 relative overflow-hidden rounded-2xl bg-[#1C1C2E] pl-2 pr-2.5 md:pr-3 py-1.5 md:py-2 border border-[#F5C518]/30"
       animate={reduce ? undefined : { y: [0, -4, 0] }}
       transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
       style={{

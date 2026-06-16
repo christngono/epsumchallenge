@@ -9,14 +9,14 @@ export default function Header() {
     <header className="bg-white border-b border-[#ebe0d5] px-6 md:px-12 py-3">
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
 
-        <div className="flex items-center gap-4">
-          <Link href="/" className="flex items-center">
+        <div className="flex items-center gap-2 md:gap-4 min-w-0">
+          <Link href="/" className="flex items-center shrink-0">
             <Image
               src="/images/logo_nguedi.png"
               alt="Nguedi JM Éditions"
               width={160}
               height={70}
-              className="h-16 w-auto object-contain"
+              className="h-12 md:h-16 w-auto object-contain"
               priority
             />
           </Link>
@@ -24,7 +24,7 @@ export default function Header() {
           <AppBanner />
         </div>
 
-        <div className="flex flex-col items-center gap-2">
+        <div className="hidden md:flex flex-col items-center gap-2">
           <p className="text-xs text-gray-500 tracking-wide">suivez-nous sur</p>
           <div className="flex items-center gap-4">
             <a href="#" aria-label="Facebook" className="text-gray-800 hover:text-[#1A3DAA] transition-colors">

@@ -92,6 +92,9 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Bande kente colorée animée */}
+      <div className="kente-bar" />
+
       {/* Overlay plein écran — révélation circulaire */}
       <AnimatePresence>
         {menuOpen && (

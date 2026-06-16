@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
+import Typewriter from "@/components/motion/Typewriter";
 
 export default function Hero() {
   const reduce = useReducedMotion();
@@ -39,17 +40,45 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#1C1C2E]/90 via-[#1C1C2E]/55 to-transparent" />
       </motion.div>
 
+      {/* Blobs colorés animés (charte Epsum) */}
+      {!reduce && (
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <motion.div
+            className="absolute -top-16 -left-10 w-72 h-72 rounded-full bg-[#F5C518]/25 blur-3xl"
+            animate={{ x: [0, 50, 0], y: [0, 40, 0] }}
+            transition={{ duration: 13, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute bottom-[-60px] left-1/3 w-80 h-80 rounded-full bg-[#1A3DAA]/30 blur-3xl"
+            animate={{ x: [0, -60, 0], y: [0, -30, 0] }}
+            transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.div
+            className="absolute top-1/4 right-10 w-64 h-64 rounded-full bg-[#7D1E1E]/30 blur-3xl"
+            animate={{ x: [0, 40, 0], y: [0, 50, 0] }}
+            transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+          />
+        </div>
+      )}
+
       <motion.div
         className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-24 w-full"
         style={reduce ? undefined : { y: contentY, opacity: contentOpacity }}
       >
         <motion.p
-          className="text-[#F5C518] text-xs font-bold tracking-[4px] uppercase mb-4"
+          className="text-[#F5C518] text-xs md:text-sm font-bold tracking-[3px] uppercase mb-4 min-h-[1.4em]"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Nouveauté — Jeu de société éducatif
+          <Typewriter
+            phrases={[
+              "Jeu de société éducatif",
+              "Redécouvrez la ville aux 7 collines",
+              "Pour toute la famille",
+              "Histoire & traditions de Yaoundé",
+            ]}
+          />
         </motion.p>
 
         <motion.h1

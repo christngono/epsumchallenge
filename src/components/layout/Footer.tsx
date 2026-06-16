@@ -11,6 +11,9 @@ export default function Footer() {
       }}
     >
 
+      {/* Bande kente colorée animée */}
+      <div className="kente-bar" />
+
       {/* Vague supérieure */}
       <div className="leading-none">
         <svg viewBox="0 0 1440 70" preserveAspectRatio="none" width="100%" height="70">
