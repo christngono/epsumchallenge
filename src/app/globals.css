@@ -130,6 +130,10 @@ main, header, nav, footer, section {
   }
 }
 
+/* ── Conteneur sans barre de défilement ── */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
 /* ── Scrollbar discrète ── */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #f5e2cc; }

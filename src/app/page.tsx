@@ -5,7 +5,7 @@ import TwoCol from "@/components/sections/TwoCol";
 import Newsletter from "@/components/sections/Newsletter";
 import EcuSection from "@/components/sections/EcuSection";
 import Carousel from "@/components/ui/Carousel";
-import Marquee from "@/components/ui/Marquee";
+import DraggableMarquee from "@/components/ui/DraggableMarquee";
 import { BookCard } from "@/components/ui/BookCard";
 import ServiceCard from "@/components/ui/ServiceCard";
 import Reveal from "@/components/motion/Reveal";
@@ -16,15 +16,15 @@ export default function Home() {
     <>
       <Hero />
 
-      {/* ── Défilement infini des livres (droite → gauche) ── */}
+      {/* ── Défilement infini des livres (auto + glisser/swipe) ── */}
       <section className="bg-[#F5E2CC] py-8">
-        <Marquee duration={45}>
+        <DraggableMarquee speed={0.6}>
           {BOOKS.map((book) => (
             <div key={book.slug} className="w-[210px]">
               <BookCard book={book} />
             </div>
           ))}
-        </Marquee>
+        </DraggableMarquee>
       </section>
 
       {/* ── Nouveau livre ── */}
