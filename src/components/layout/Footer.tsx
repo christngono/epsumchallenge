@@ -3,7 +3,13 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="section-dark-tribal bg-[#1C1C2E] text-white relative overflow-hidden">
+    <footer
+      className="section-dark-tribal bg-[#1C1C2E] text-white relative overflow-hidden bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(28,28,46,0.86), rgba(28,28,46,0.92)), url('/images/fond_EPSUM.png')",
+      }}
+    >
 
       {/* Vague supérieure */}
       <div className="leading-none">
