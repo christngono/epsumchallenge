@@ -30,7 +30,7 @@ export default function BookCover({
     );
   }
 
-  const color = book.coverColor ?? "#1A3DAA";
+  const color = book.coverColor ?? "#D9591A";
 
   return (
     <div
@@ -40,7 +40,7 @@ export default function BookCover({
       }}
     >
       {/* filet décoratif haut */}
-      <span className="block w-10 h-[3px] bg-[#F5C518]" />
+      <span className="block w-10 h-[3px] bg-[#F4A906]" />
 
       <div className="flex-1 flex items-center">
         <h3
@@ -53,7 +53,7 @@ export default function BookCover({
 
       <div>
         <p className="text-[10px] tracking-[2px] uppercase text-white/70">{book.author}</p>
-        {book.year && <p className="text-[10px] text-[#F5C518] font-bold mt-0.5">{book.year}</p>}
+        {book.year && <p className="text-[10px] text-[#F4A906] font-bold mt-0.5">{book.year}</p>}
       </div>
     </div>
   );

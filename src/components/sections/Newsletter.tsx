@@ -17,7 +17,7 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="bg-[#C4B5D5] py-14 px-6 md:px-12 relative overflow-hidden">
+    <section className="bg-[#EBC79E] py-14 px-6 md:px-12 relative overflow-hidden">
 
       {/* Livre décoratif en fond */}
       <div
@@ -33,7 +33,7 @@ export default function Newsletter() {
       <div className="relative z-10 max-w-5xl mx-auto flex flex-col sm:flex-row items-center gap-12 flex-wrap">
 
         <motion.div
-          className="bg-[#1A3DAA] text-white px-6 py-5 text-[12.5px] font-bold leading-[1.75] tracking-[0.5px] min-w-[250px]"
+          className="bg-[#D9591A] text-white px-6 py-5 text-[12.5px] font-bold leading-[1.75] tracking-[0.5px] min-w-[250px]"
           initial={{ opacity: 0, rotate: -8, x: -20 }}
           whileInView={{ opacity: 1, rotate: -2, x: 0 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -51,12 +51,12 @@ export default function Newsletter() {
             placeholder="email"
             required
             aria-label="Votre email"
-            className="flex-1 px-5 py-3.5 text-sm border-2 border-black/15 border-r-0 rounded-l focus:outline-none focus:border-[#1A3DAA] bg-white/90"
+            className="flex-1 px-5 py-3.5 text-sm border-2 border-black/15 border-r-0 rounded-l focus:outline-none focus:border-[#D9591A] bg-white/90"
           />
           <button
             type="submit"
             className={`px-7 py-3.5 text-sm font-semibold rounded-r border-none cursor-pointer transition-colors ${
-              sent ? "bg-[#27ae60] text-white" : "bg-[#1A3DAA] hover:bg-[#0E2A88] text-white"
+              sent ? "bg-[#27ae60] text-white" : "bg-[#D9591A] hover:bg-[#A8400F] text-white"
             }`}
           >
             {sent ? "✓ Inscrit !" : "inscription"}

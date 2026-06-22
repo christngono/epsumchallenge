@@ -5,10 +5,10 @@ import { Stagger, StaggerItem } from "@/components/motion/Stagger";
 
 export default function EcuSection() {
   return (
-    <section className="section-dark-tribal bg-[#1C1C2E] py-20 px-6 md:px-12">
+    <section className="section-dark-tribal bg-[#2A1812] py-20 px-6 md:px-12">
       <div className="max-w-5xl mx-auto">
         <Reveal>
-          <p className="text-[#F5C518] text-xs font-bold tracking-[4px] uppercase mb-3 text-center">
+          <p className="text-[#F4A906] text-xs font-bold tracking-[4px] uppercase mb-3 text-center">
             Nouveauté
           </p>
           <h2
@@ -28,8 +28,8 @@ export default function EcuSection() {
         <Stagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" stagger={0.1}>
           {ECU.catalog.map((item) => (
             <StaggerItem key={item}>
-              <div className="h-full bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 hover:border-[#F5C518]/40 transition-colors">
-                <span className="block w-8 h-1 bg-[#F5C518] mb-3" />
+              <div className="h-full bg-white/5 border border-white/10 rounded-lg p-5 hover:bg-white/10 hover:border-[#F4A906]/40 transition-colors">
+                <span className="block w-8 h-1 bg-[#F4A906] mb-3" />
                 <p className="text-white text-sm font-semibold leading-snug">{item}</p>
               </div>
             </StaggerItem>
@@ -39,7 +39,7 @@ export default function EcuSection() {
         <Reveal className="text-center mt-12">
           <Link
             href="/epsum-challenge"
-            className="inline-block bg-[#F5C518] hover:bg-[#DBA900] text-gray-900 font-black text-xs tracking-widest px-10 py-4 rounded-full transition-all hover:scale-[1.04]"
+            className="inline-block bg-[#F4A906] hover:bg-[#C5870A] text-gray-900 font-black text-xs tracking-widest px-10 py-4 btn-3d"
           >
             DÉCOUVRIR L&apos;UNIVERS
           </Link>

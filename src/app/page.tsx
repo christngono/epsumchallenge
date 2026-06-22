@@ -31,7 +31,7 @@ export default function Home() {
       <NewBookSection />
 
       {/* ── Carrousel Services ── */}
-      <Reveal as="section" className="mx-6 my-5 border-3 border-[#F5C518] rounded bg-white px-3.5 py-8">
+      <Reveal as="section" className="mx-6 my-5 border-3 border-[#F4A906] rounded bg-white px-3.5 py-8">
         <Carousel visibleDesktop={4} visibleTablet={2} visibleMobile={1} arrowVariant="outline">
           {SERVICES.map((svc) => (
             <ServiceCard key={svc.id} {...svc} />

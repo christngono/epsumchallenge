@@ -9,7 +9,7 @@ export function BookCard({ book }: { book: Book }) {
     <TiltCard className="h-[320px]">
       <Link
         href={`/nos-livres/${book.slug}`}
-        className="relative block h-full rounded-sm overflow-hidden cursor-pointer group bg-[#f0f0f0] shadow-lg"
+        className="relative block h-full rounded-sm overflow-hidden cursor-pointer group bg-[#EFE3D2] shadow-lg"
       >
         <div className="absolute inset-0 transition-transform duration-[450ms] group-hover:scale-[1.05]">
           <BookCover book={book} sizes="(max-width: 560px) 85vw, (max-width: 900px) 50vw, 25vw" />

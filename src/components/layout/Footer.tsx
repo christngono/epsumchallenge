@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer
-      className="section-dark-tribal bg-[#1C1C2E] text-white relative overflow-hidden bg-cover bg-center bg-no-repeat"
+      className="section-dark-tribal bg-[#2A1812] text-white relative overflow-hidden bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage:
           "linear-gradient(rgba(28,28,46,0.86), rgba(28,28,46,0.92)), url('/images/fond_EPSUM.png')",
@@ -17,7 +17,7 @@ export default function Footer() {
       {/* Vague supérieure */}
       <div className="leading-none">
         <svg viewBox="0 0 1440 70" preserveAspectRatio="none" width="100%" height="70">
-          <path d="M0,35 C240,70 480,0 720,35 C960,70 1200,10 1440,35 L1440,0 L0,0 Z" fill="#C4B5D5" />
+          <path d="M0,35 C240,70 480,0 720,35 C960,70 1200,10 1440,35 L1440,0 L0,0 Z" fill="#EBC79E" />
         </svg>
       </div>
 

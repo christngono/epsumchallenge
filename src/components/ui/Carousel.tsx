@@ -51,9 +51,9 @@ export default function Carousel({
   const arrowBase =
     "flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-150 disabled:opacity-35 disabled:cursor-default";
   const arrowFilled =
-    "bg-[#F5C518] hover:bg-[#DBA900] hover:scale-105 border-none";
+    "bg-[#F4A906] hover:bg-[#C5870A] hover:scale-105 border-none";
   const arrowOutline =
-    "bg-transparent border-2 border-[#F5C518] hover:bg-[#F5C518] hover:scale-105";
+    "bg-transparent border-2 border-[#F4A906] hover:bg-[#F4A906] hover:scale-105";
 
   const arrowClass = `${arrowBase} ${arrowVariant === "outline" ? arrowOutline : arrowFilled}`;
 

@@ -25,7 +25,7 @@ export default function Hero() {
   return (
     <section
       ref={ref}
-      className="relative bg-[#1C1C2E] overflow-hidden min-h-[560px] flex items-center"
+      className="relative bg-[#2A1812] overflow-hidden min-h-[560px] flex items-center"
     >
       {/* Image de fond hero — parallax */}
       <motion.div className="absolute inset-0" style={reduce ? undefined : { y: bgY, scale: bgScale }}>
@@ -37,19 +37,19 @@ export default function Hero() {
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1C1C2E]/90 via-[#1C1C2E]/55 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#2A1812]/90 via-[#2A1812]/55 to-transparent" />
       </motion.div>
 
       {/* Blobs colorés animés (charte Epsum) */}
       {!reduce && (
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <motion.div
-            className="absolute -top-16 -left-10 w-72 h-72 rounded-full bg-[#F5C518]/25 blur-3xl"
+            className="absolute -top-16 -left-10 w-72 h-72 rounded-full bg-[#F4A906]/25 blur-3xl"
             animate={{ x: [0, 50, 0], y: [0, 40, 0] }}
             transition={{ duration: 13, repeat: Infinity, ease: "easeInOut" }}
           />
           <motion.div
-            className="absolute bottom-[-60px] left-1/3 w-80 h-80 rounded-full bg-[#1A3DAA]/30 blur-3xl"
+            className="absolute bottom-[-60px] left-1/3 w-80 h-80 rounded-full bg-[#D9591A]/30 blur-3xl"
             animate={{ x: [0, -60, 0], y: [0, -30, 0] }}
             transition={{ duration: 16, repeat: Infinity, ease: "easeInOut" }}
           />
@@ -66,7 +66,7 @@ export default function Hero() {
         style={reduce ? undefined : { y: contentY, opacity: contentOpacity }}
       >
         <motion.p
-          className="text-[#F5C518] text-xs md:text-sm font-bold tracking-[3px] uppercase mb-4 min-h-[1.4em]"
+          className="text-[#F4A906] text-xs md:text-sm font-bold tracking-[3px] uppercase mb-4 min-h-[1.4em]"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -109,13 +109,13 @@ export default function Hero() {
         >
           <Link
             href="/epsum-challenge"
-            className="inline-flex items-center gap-2 bg-[#F5C518] hover:bg-[#DBA900] text-gray-900 font-bold text-sm tracking-widest px-8 py-4 rounded-full transition-all hover:scale-[1.04]"
+            className="inline-flex items-center gap-2 bg-[#F4A906] hover:bg-[#C5870A] text-gray-900 font-bold text-sm tracking-widest px-8 py-4 btn-3d"
           >
             DÉCOUVRIR EPSUM
           </Link>
           <Link
             href="/nos-livres"
-            className="inline-flex items-center gap-2 border-2 border-white/40 hover:border-white text-white font-bold text-sm tracking-widest px-8 py-4 rounded-full transition-all hover:scale-[1.04]"
+            className="inline-flex items-center gap-2 border-2 border-white/40 hover:border-white text-white font-bold text-sm tracking-widest px-8 py-4 btn-3d"
           >
             NOS LIVRES
           </Link>
@@ -155,7 +155,7 @@ export default function Hero() {
             animate={{ y: [0, 6, 0] }}
             transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
           >
-            <span className="w-1 h-2 rounded-full bg-[#F5C518]" />
+            <span className="w-1 h-2 rounded-full bg-[#F4A906]" />
           </motion.div>
         </motion.div>
       )}

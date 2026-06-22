@@ -44,7 +44,7 @@ export default function EpsumChallengePage() {
   return (
     <>
       {/* ── Hero banner ── */}
-      <section className="section-dark-tribal relative bg-[#1C1C2E] min-h-[460px] flex items-center overflow-hidden">
+      <section className="section-dark-tribal relative bg-[#2A1812] min-h-[460px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/hero_for_epsumchallenge.png"
@@ -54,11 +54,11 @@ export default function EpsumChallengePage() {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1C1C2E]/80 to-[#1C1C2E]/95" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#2A1812]/80 to-[#2A1812]/95" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 py-20 text-center w-full">
           <Reveal>
-            <p className="text-[#F5C518] text-xs font-bold tracking-[4px] uppercase mb-4">
+            <p className="text-[#F4A906] text-xs font-bold tracking-[4px] uppercase mb-4">
               Jeu de société éducatif
             </p>
             <h1
@@ -73,7 +73,7 @@ export default function EpsumChallengePage() {
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-[#F5C518] hover:bg-[#DBA900] text-gray-900 font-black text-sm tracking-widest px-10 py-4 rounded-full transition-all hover:scale-[1.04]"
+              className="inline-block bg-[#F4A906] hover:bg-[#C5870A] text-gray-900 font-black text-sm tracking-widest px-10 py-4 btn-3d"
             >
               COMMANDER — {EPSUM.price.toLocaleString()} F CFA
             </Link>
@@ -82,7 +82,7 @@ export default function EpsumChallengePage() {
       </section>
 
       {/* ── Présentation ── */}
-      <section className="bg-white py-20 px-6 md:px-12 overflow-hidden">
+      <section className="bg-transparent py-20 px-6 md:px-12 overflow-hidden">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-14">
           <Reveal direction="right" className="flex-shrink-0 w-[240px] md:w-[300px]">
             <Parallax offset={40}>
@@ -96,24 +96,24 @@ export default function EpsumChallengePage() {
             </Parallax>
           </Reveal>
           <Reveal direction="left" delay={0.1} className="flex-1">
-            <p className="text-[10px] font-bold tracking-[4px] text-[#1A3DAA] uppercase mb-2">
+            <p className="text-[10px] font-bold tracking-[4px] text-[#D9591A] uppercase mb-2">
               Jeu de société · Patrimoine de Yaoundé
             </p>
             <h2
-              className="text-3xl md:text-4xl text-[#1C1C2E] font-bold leading-snug mb-4"
+              className="text-3xl md:text-4xl text-[#2A1812] font-bold leading-snug mb-4"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Un voyage au cœur de notre identité
             </h2>
             <p className="text-[15px] leading-relaxed text-[#444] mb-4">{EPSUM.intro}</p>
-            <p className="text-[15px] leading-relaxed text-[#1C1C2E] font-medium mb-8">{EPSUM.goal}</p>
+            <p className="text-[15px] leading-relaxed text-[#2A1812] font-medium mb-8">{EPSUM.goal}</p>
             <div className="flex items-center gap-6 flex-wrap">
               <span className="text-3xl font-black text-[#7D1E1E]">
                 {EPSUM.price.toLocaleString()} F CFA
               </span>
               <Link
                 href="/contact"
-                className="inline-block bg-[#F5C518] hover:bg-[#DBA900] text-gray-900 font-black text-xs tracking-widest px-8 py-3.5 rounded-full transition-all hover:scale-[1.04]"
+                className="inline-block bg-[#F4A906] hover:bg-[#C5870A] text-gray-900 font-black text-xs tracking-widest px-8 py-3.5 btn-3d"
               >
                 COMMANDER
               </Link>
@@ -123,7 +123,7 @@ export default function EpsumChallengePage() {
       </section>
 
       {/* ── Comment ça marche ── */}
-      <section className="section-dark-tribal bg-[#1C1C2E] py-20 px-6 md:px-12">
+      <section className="section-dark-tribal bg-[#2A1812] py-20 px-6 md:px-12">
         <div className="max-w-5xl mx-auto">
           <Reveal>
             <h2
@@ -138,7 +138,7 @@ export default function EpsumChallengePage() {
             {STEPS.map((item) => (
               <StaggerItem key={item.step}>
                 <div className="text-center h-full">
-                  <div className="w-14 h-14 rounded-full bg-[#F5C518] flex items-center justify-center text-gray-900 font-black text-lg mx-auto mb-4">
+                  <div className="w-14 h-14 rounded-full bg-[#F4A906] flex items-center justify-center text-gray-900 font-black text-lg mx-auto mb-4">
                     {item.step}
                   </div>
                   <h3 className="text-white font-bold text-lg mb-3">{item.title}</h3>
@@ -154,7 +154,7 @@ export default function EpsumChallengePage() {
       <section className="bg-[#F5E2CC] py-16 px-6 md:px-12">
         <div className="max-w-5xl mx-auto">
           <Reveal>
-            <h2 className="text-2xl font-black text-[#1C1C2E] tracking-wide mb-8 text-center">
+            <h2 className="text-2xl font-black text-[#2A1812] tracking-wide mb-8 text-center">
               GALERIE
             </h2>
           </Reveal>
@@ -177,14 +177,14 @@ export default function EpsumChallengePage() {
       </section>
 
       {/* ── Epsum Challenge Univers ── */}
-      <section className="bg-white py-20 px-6 md:px-12">
+      <section className="bg-transparent py-20 px-6 md:px-12">
         <div className="max-w-5xl mx-auto">
           <Reveal>
-            <p className="text-[10px] font-bold tracking-[4px] text-[#1A3DAA] uppercase mb-3 text-center">
+            <p className="text-[10px] font-bold tracking-[4px] text-[#D9591A] uppercase mb-3 text-center">
               Depuis {ECU.since}
             </p>
             <h2
-              className="text-3xl md:text-4xl text-[#1C1C2E] font-bold text-center mb-5"
+              className="text-3xl md:text-4xl text-[#2A1812] font-bold text-center mb-5"
               style={{ fontFamily: "var(--font-playfair)" }}
             >
               Epsum Challenge Univers
@@ -199,9 +199,9 @@ export default function EpsumChallengePage() {
           <Stagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" stagger={0.1}>
             {ECU.catalog.map((item) => (
               <StaggerItem key={item}>
-                <div className="h-full bg-[#faf6f1] border border-[#ebe0d5] rounded-lg p-5 hover:border-[#F5C518] transition-colors">
-                  <span className="block w-8 h-1 bg-[#F5C518] mb-3" />
-                  <p className="text-[#1C1C2E] text-sm font-semibold leading-snug">{item}</p>
+                <div className="h-full bg-[#F7EEDD] border border-[#ebe0d5] rounded-lg p-5 hover:border-[#F4A906] transition-colors">
+                  <span className="block w-8 h-1 bg-[#F4A906] mb-3" />
+                  <p className="text-[#2A1812] text-sm font-semibold leading-snug">{item}</p>
                 </div>
               </StaggerItem>
             ))}
@@ -210,11 +210,11 @@ export default function EpsumChallengePage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="section-dark-tribal bg-[#1C1C2E] py-14 px-6 md:px-12 text-center">
+      <section className="section-dark-tribal bg-[#2A1812] py-14 px-6 md:px-12 text-center">
         <Reveal>
           <Link
             href="/contact"
-            className="inline-block bg-[#F5C518] hover:bg-[#DBA900] text-gray-900 font-black text-sm tracking-widest px-10 py-4 rounded-full transition-all hover:scale-[1.04]"
+            className="inline-block bg-[#F4A906] hover:bg-[#C5870A] text-gray-900 font-black text-sm tracking-widest px-10 py-4 btn-3d"
           >
             COMMANDER MAINTENANT
           </Link>

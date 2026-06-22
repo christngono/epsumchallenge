@@ -53,11 +53,11 @@ export default function Navbar() {
               <Link
                 href={link.href}
                 className={`text-[11px] font-bold tracking-[2px] relative pb-1 transition-colors
-                  after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-[#1A3DAA]
+                  after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-[#D9591A]
                   after:transition-all after:duration-300
                   ${pathname === link.href
-                    ? "text-[#1A3DAA] after:w-full"
-                    : "text-gray-900 hover:text-[#1A3DAA] after:w-0 hover:after:w-full"
+                    ? "text-[#D9591A] after:w-full"
+                    : "text-gray-900 hover:text-[#D9591A] after:w-0 hover:after:w-full"
                   }`}
               >
                 {link.label}
@@ -68,8 +68,8 @@ export default function Navbar() {
           <li>
             <Link
               href="/epsum-challenge"
-              className="text-[11px] font-bold tracking-[2px] bg-[#F5C518] hover:bg-[#DBA900] text-gray-900
-                px-4 py-2 rounded-full transition-colors"
+              className="text-[11px] font-bold tracking-[2px] bg-[#F4A906] hover:bg-[#C5870A] text-gray-900
+                px-4 py-2 btn-3d transition-colors"
             >
               EPSUM CHALLENGE
             </Link>
@@ -78,7 +78,7 @@ export default function Navbar() {
 
         {/* Barre mobile */}
         <div className="md:hidden flex items-center justify-between py-3">
-          <span className="text-xs font-bold tracking-widest text-[#1A3DAA]">MENU</span>
+          <span className="text-xs font-bold tracking-widest text-[#D9591A]">MENU</span>
           <button
             onClick={() => setMenuOpen(true)}
             aria-label="Ouvrir le menu"
@@ -99,7 +99,7 @@ export default function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            className="md:hidden fixed inset-0 z-[60] section-dark-tribal bg-[#1C1C2E] flex flex-col"
+            className="md:hidden fixed inset-0 z-[60] section-dark-tribal bg-[#2A1812] flex flex-col"
             variants={overlayVariants}
             initial="hidden"
             animate="visible"
@@ -111,7 +111,7 @@ export default function Navbar() {
               <button
                 onClick={() => setMenuOpen(false)}
                 aria-label="Fermer le menu"
-                className="w-12 h-12 rounded-full border-2 border-white/30 flex items-center justify-center text-white hover:border-[#F5C518] hover:text-[#F5C518] transition-colors"
+                className="w-12 h-12 rounded-full border-2 border-white/30 flex items-center justify-center text-white hover:border-[#F4A906] hover:text-[#F4A906] transition-colors"
               >
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
                   <line x1="6" y1="6" x2="18" y2="18" />
@@ -133,7 +133,7 @@ export default function Navbar() {
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
                     className={`text-3xl font-bold tracking-wide transition-colors
-                      ${pathname === link.href ? "text-[#F5C518]" : "text-white hover:text-[#F5C518]"}`}
+                      ${pathname === link.href ? "text-[#F4A906]" : "text-white hover:text-[#F4A906]"}`}
                     style={{ fontFamily: "var(--font-playfair)" }}
                   >
                     {link.label}
@@ -144,7 +144,7 @@ export default function Navbar() {
                 <Link
                   href="/epsum-challenge"
                   onClick={() => setMenuOpen(false)}
-                  className="inline-block text-sm font-bold tracking-[2px] bg-[#F5C518] hover:bg-[#DBA900] text-gray-900 px-8 py-4 rounded-full transition-colors"
+                  className="inline-block text-sm font-bold tracking-[2px] bg-[#F4A906] hover:bg-[#C5870A] text-gray-900 px-8 py-4 btn-3d transition-colors"
                 >
                   EPSUM CHALLENGE
                 </Link>

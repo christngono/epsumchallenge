@@ -15,7 +15,7 @@ export default function AppBanner() {
 
   return (
     <motion.div
-      className="flex items-center gap-2 md:gap-3 relative overflow-hidden rounded-2xl bg-[#1C1C2E] pl-2 pr-2.5 md:pr-3 py-1.5 md:py-2 border border-[#F5C518]/30"
+      className="flex items-center gap-2 md:gap-3 relative overflow-hidden rounded-2xl bg-[#2A1812] pl-2 pr-2.5 md:pr-3 py-1.5 md:py-2 border border-[#F4A906]/30"
       animate={reduce ? undefined : { y: [0, -4, 0] }}
       transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
       style={{
@@ -42,13 +42,13 @@ export default function AppBanner() {
       )}
 
       {/* Visuel du jeu */}
-      <div className="relative w-11 h-11 flex-shrink-0 rounded-xl overflow-hidden bg-[#F5C518]/10">
+      <div className="relative w-11 h-11 flex-shrink-0 rounded-xl overflow-hidden bg-[#F4A906]/10">
         <Image src={APP_IMAGE} alt="Jeu mobile Epsum" fill className="object-contain p-1" sizes="44px" />
       </div>
 
       {/* Texte + boutons stores */}
       <div className="relative z-10">
-        <p className="text-[8px] font-bold tracking-[2px] text-[#F5C518] uppercase leading-none mb-0.5">
+        <p className="text-[8px] font-bold tracking-[2px] text-[#F4A906] uppercase leading-none mb-0.5">
           Nouveau · Jeu mobile
         </p>
         <p className="text-[13px] font-extrabold text-white leading-tight mb-1.5">

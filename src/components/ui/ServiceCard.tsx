@@ -67,7 +67,7 @@ export default function ServiceCard({ name, color, icon, description, large }: S
       >
         <IconContent icon={icon} color={color} />
       </div>
-      <span className="text-sm font-semibold text-[#1A3DAA] tracking-[0.3px] text-center">{name}</span>
+      <span className="text-sm font-semibold text-[#D9591A] tracking-[0.3px] text-center">{name}</span>
       {description && (
         <p className="text-xs text-gray-500 text-center leading-relaxed max-w-[160px]">{description}</p>
       )}

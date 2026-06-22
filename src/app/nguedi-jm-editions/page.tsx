@@ -18,10 +18,10 @@ export default function NguediJmEditionsPage() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="bg-[#faf6f1] border-b border-[#ebe0d5] py-20 px-6 md:px-12 overflow-hidden">
+      <section className="bg-[#F7EEDD] border-b border-[#ebe0d5] py-20 px-6 md:px-12 overflow-hidden">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-16">
           <Reveal direction="right" className="flex-1">
-            <p className="text-[10px] font-bold tracking-[4px] text-[#1A3DAA] uppercase mb-3">
+            <p className="text-[10px] font-bold tracking-[4px] text-[#D9591A] uppercase mb-3">
               Depuis 2011 · Yaoundé, Cameroun
             </p>
             <h1
@@ -33,7 +33,7 @@ export default function NguediJmEditionsPage() {
             <p className="text-[15px] leading-relaxed text-[#444] mb-4 max-w-lg">
               {EDITIONS.intro}
             </p>
-            <p className="text-[16px] leading-relaxed text-[#1C1C2E] font-semibold max-w-lg italic">
+            <p className="text-[16px] leading-relaxed text-[#2A1812] font-semibold max-w-lg italic">
               « Faire du texte de qualité une réalité. »
             </p>
           </Reveal>
@@ -52,7 +52,7 @@ export default function NguediJmEditionsPage() {
       </section>
 
       {/* ── Le fondateur ── */}
-      <section className="bg-white py-20 px-6 md:px-12 overflow-hidden">
+      <section className="bg-transparent py-20 px-6 md:px-12 overflow-hidden">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-start gap-14">
           <Reveal direction="right" className="flex-shrink-0 w-[220px] md:w-[260px]">
             <Parallax offset={50}>
@@ -66,7 +66,7 @@ export default function NguediJmEditionsPage() {
             </Parallax>
           </Reveal>
           <Reveal direction="left" delay={0.1} className="flex-1">
-            <p className="text-[10px] font-bold tracking-[4px] text-[#1A3DAA] uppercase mb-3">
+            <p className="text-[10px] font-bold tracking-[4px] text-[#D9591A] uppercase mb-3">
               Le Fondateur
             </p>
             <h2
@@ -82,15 +82,15 @@ export default function NguediJmEditionsPage() {
             <p className="text-[15px] leading-relaxed text-[#444] mb-8">{FOUNDER.mission}</p>
             <div className="flex flex-wrap gap-8">
               <div>
-                <Counter to={6} suffix="+" className="text-3xl font-black text-[#1A3DAA]" />
+                <Counter to={6} suffix="+" className="text-3xl font-black text-[#D9591A]" />
                 <p className="text-xs text-gray-500 tracking-wide">Romans publiés</p>
               </div>
               <div>
-                <Counter to={1} className="text-3xl font-black text-[#1A3DAA]" />
+                <Counter to={1} className="text-3xl font-black text-[#D9591A]" />
                 <p className="text-xs text-gray-500 tracking-wide">Bande dessinée</p>
               </div>
               <div>
-                <Counter to={1} className="text-3xl font-black text-[#1A3DAA]" />
+                <Counter to={1} className="text-3xl font-black text-[#D9591A]" />
                 <p className="text-xs text-gray-500 tracking-wide">Jeu culturel</p>
               </div>
             </div>
@@ -99,10 +99,10 @@ export default function NguediJmEditionsPage() {
       </section>
 
       {/* ── Nos compétences / services ── */}
-      <section className="bg-[#faf6f1] py-20 px-6 md:px-12 border-y border-[#ebe0d5]">
+      <section className="bg-[#F7EEDD] py-20 px-6 md:px-12 border-y border-[#ebe0d5]">
         <div className="max-w-5xl mx-auto">
           <Reveal>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1C1C2E] mb-3 text-center" style={{ fontFamily: "var(--font-playfair)" }}>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#2A1812] mb-3 text-center" style={{ fontFamily: "var(--font-playfair)" }}>
               Notre accompagnement
             </h2>
             <p className="text-[15px] leading-relaxed text-[#444] max-w-2xl mx-auto text-center mb-12">
@@ -117,8 +117,8 @@ export default function NguediJmEditionsPage() {
             ].map((c) => (
               <StaggerItem key={c.t}>
                 <div className="h-full bg-white rounded-lg p-7 shadow-sm border border-[#ebe0d5]">
-                  <span className="block w-8 h-1 bg-[#F5C518] mb-4" />
-                  <h3 className="text-lg font-bold text-[#1C1C2E] mb-2">{c.t}</h3>
+                  <span className="block w-8 h-1 bg-[#F4A906] mb-4" />
+                  <h3 className="text-lg font-bold text-[#2A1812] mb-2">{c.t}</h3>
                   <p className="text-sm leading-relaxed text-[#555]">{c.d}</p>
                 </div>
               </StaggerItem>
@@ -128,13 +128,13 @@ export default function NguediJmEditionsPage() {
       </section>
 
       {/* ── Unités autonomes T.E.N ── */}
-      <section className="bg-white py-20 px-6 md:px-12">
+      <section className="bg-transparent py-20 px-6 md:px-12">
         <div className="max-w-5xl mx-auto">
           <Reveal>
-            <p className="text-[10px] font-bold tracking-[4px] text-[#1A3DAA] uppercase mb-3 text-center">
+            <p className="text-[10px] font-bold tracking-[4px] text-[#D9591A] uppercase mb-3 text-center">
               Test d&apos;Évaluation Nguédi
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1C1C2E] mb-3 text-center" style={{ fontFamily: "var(--font-playfair)" }}>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#2A1812] mb-3 text-center" style={{ fontFamily: "var(--font-playfair)" }}>
               Les unités autonomes
             </h2>
             <p className="text-sm text-[#555] max-w-2xl mx-auto text-center mb-10">
@@ -145,7 +145,7 @@ export default function NguediJmEditionsPage() {
           <Stagger className="flex flex-wrap justify-center gap-3" stagger={0.04}>
             {TEN_UNITS.map((u) => (
               <StaggerItem key={u}>
-                <span className="inline-block bg-[#F5E2CC] text-[#1C1C2E] text-sm font-semibold px-4 py-2 rounded-full hover:bg-[#F5C518] transition-colors">
+                <span className="inline-block bg-[#F5E2CC] text-[#2A1812] text-sm font-semibold px-4 py-2 rounded-full hover:bg-[#F4A906] transition-colors">
                   {u}
                 </span>
               </StaggerItem>
@@ -158,7 +158,7 @@ export default function NguediJmEditionsPage() {
       <section className="bg-[#F5E2CC] py-20 px-6 md:px-12">
         <div className="max-w-5xl mx-auto">
           <Reveal>
-            <h2 className="text-2xl font-black text-[#1C1C2E] tracking-wide mb-10 text-center">
+            <h2 className="text-2xl font-black text-[#2A1812] tracking-wide mb-10 text-center">
               NOS PUBLICATIONS
             </h2>
           </Reveal>
@@ -175,10 +175,10 @@ export default function NguediJmEditionsPage() {
                     </div>
                   </div>
                   <div className="p-5 flex flex-col">
-                    <span className="text-[10px] font-bold tracking-[3px] text-[#1A3DAA] uppercase mb-1">
+                    <span className="text-[10px] font-bold tracking-[3px] text-[#D9591A] uppercase mb-1">
                       {book.genre}
                     </span>
-                    <h3 className="text-sm font-bold text-[#1C1C2E] leading-snug mb-2">{book.title}</h3>
+                    <h3 className="text-sm font-bold text-[#2A1812] leading-snug mb-2">{book.title}</h3>
                     <p className="text-xs text-gray-500">{book.author}</p>
                     {book.price && (
                       <p className="text-sm font-black text-[#7D1E1E] mt-2">
@@ -194,7 +194,7 @@ export default function NguediJmEditionsPage() {
       </section>
 
       {/* ── Epsum Challenge Univers ── */}
-      <section className="section-dark-tribal bg-[#1C1C2E] py-20 px-6 md:px-12">
+      <section className="section-dark-tribal bg-[#2A1812] py-20 px-6 md:px-12">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
           <Reveal direction="right" className="flex-shrink-0 w-[200px]">
             <Image
@@ -206,7 +206,7 @@ export default function NguediJmEditionsPage() {
             />
           </Reveal>
           <Reveal direction="left" delay={0.1} className="flex-1">
-            <p className="text-[#F5C518] text-xs font-bold tracking-[4px] uppercase mb-3">
+            <p className="text-[#F4A906] text-xs font-bold tracking-[4px] uppercase mb-3">
               Notre création originale · Depuis {ECU.since}
             </p>
             <h2
@@ -222,7 +222,7 @@ export default function NguediJmEditionsPage() {
             </p>
             <Link
               href="/epsum-challenge"
-              className="inline-block bg-[#F5C518] hover:bg-[#DBA900] text-gray-900 font-black text-xs tracking-widest px-8 py-3.5 rounded-full transition-all hover:scale-[1.04]"
+              className="inline-block bg-[#F4A906] hover:bg-[#C5870A] text-gray-900 font-black text-xs tracking-widest px-8 py-3.5 btn-3d"
             >
               DÉCOUVRIR LE JEU
             </Link>

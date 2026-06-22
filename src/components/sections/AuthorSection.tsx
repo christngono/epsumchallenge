@@ -13,7 +13,7 @@ const STATS = [
 
 export default function AuthorSection() {
   return (
-    <section className="bg-[#faf6f1] py-20 px-6 md:px-12 border-t border-[#ebe0d5] overflow-hidden">
+    <section className="bg-[#F7EEDD] py-20 px-6 md:px-12 border-t border-[#ebe0d5] overflow-hidden">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-16">
 
         <Reveal direction="right" className="flex-shrink-0 w-[220px] md:w-[260px]">
@@ -29,7 +29,7 @@ export default function AuthorSection() {
         </Reveal>
 
         <Reveal direction="left" delay={0.1} className="flex-1">
-          <p className="text-[11px] font-bold tracking-[4px] text-[#1A3DAA] uppercase mb-3">
+          <p className="text-[11px] font-bold tracking-[4px] text-[#D9591A] uppercase mb-3">
             L&apos;Éditeur · L&apos;Auteur
           </p>
           <h2
@@ -49,7 +49,7 @@ export default function AuthorSection() {
           <div className="flex flex-wrap gap-8 mb-8">
             {STATS.map((s) => (
               <div key={s.label}>
-                <Counter to={s.to} suffix={s.suffix} className="text-3xl font-black text-[#1A3DAA]" />
+                <Counter to={s.to} suffix={s.suffix} className="text-3xl font-black text-[#D9591A]" />
                 <p className="text-xs text-gray-500 tracking-wide">{s.label}</p>
               </div>
             ))}
@@ -57,7 +57,7 @@ export default function AuthorSection() {
 
           <Link
             href="/nguedi-jm-editions"
-            className="inline-block px-8 py-3.5 bg-[#1A3DAA] hover:bg-[#0E2A88] text-white text-xs font-bold tracking-[2px] rounded-full transition-all hover:scale-[1.04]"
+            className="inline-block px-8 py-3.5 bg-[#D9591A] hover:bg-[#A8400F] text-white text-xs font-bold tracking-[2px] btn-3d"
           >
             DÉCOUVRIR L&apos;AUTEUR
           </Link>

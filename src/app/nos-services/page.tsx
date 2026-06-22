@@ -46,13 +46,13 @@ export default function NosServicesPage() {
   return (
     <>
       {/* ── En-tête ── */}
-      <section className="bg-[#faf6f1] border-b border-[#ebe0d5] py-16 px-6 md:px-12 text-center">
+      <section className="bg-[#F7EEDD] border-b border-[#ebe0d5] py-16 px-6 md:px-12 text-center">
         <Reveal>
-          <p className="text-[10px] font-bold tracking-[4px] text-[#1A3DAA] uppercase mb-3">
+          <p className="text-[10px] font-bold tracking-[4px] text-[#D9591A] uppercase mb-3">
             Expertise éditoriale
           </p>
           <h1
-            className="text-4xl md:text-5xl text-[#1C1C2E] font-bold mb-5"
+            className="text-4xl md:text-5xl text-[#2A1812] font-bold mb-5"
             style={{ fontFamily: "var(--font-playfair)" }}
           >
             Nos Services
@@ -64,14 +64,14 @@ export default function NosServicesPage() {
       </section>
 
       {/* ── Grille services ── */}
-      <section className="bg-white py-16 px-6 md:px-12">
+      <section className="bg-transparent py-16 px-6 md:px-12">
         <Stagger className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8" stagger={0.1}>
           {SERVICES.map((svc) => {
             const detail = SERVICE_DETAILS[svc.id];
             return (
               <StaggerItem
                 key={svc.id}
-                className="border border-[#ebe0d5] rounded-lg p-8 hover:shadow-lg hover:border-[#F5C518] transition-all bg-white"
+                className="border border-[#ebe0d5] rounded-lg p-8 hover:shadow-lg hover:border-[#F4A906] transition-all bg-white"
               >
                 <div className="flex items-center gap-4 mb-5">
                   <div
@@ -80,7 +80,7 @@ export default function NosServicesPage() {
                   >
                     <IconSvc icon={svc.icon} />
                   </div>
-                  <h2 className="text-xl font-bold text-[#1C1C2E]">{svc.name}</h2>
+                  <h2 className="text-xl font-bold text-[#2A1812]">{svc.name}</h2>
                 </div>
                 <p className="text-sm leading-relaxed text-[#444] mb-5">
                   {detail?.longDesc ?? svc.description}
@@ -89,8 +89,8 @@ export default function NosServicesPage() {
                   <ul className="flex flex-col gap-1.5">
                     {detail.deliverables.map((d) => (
                       <li key={d} className="flex items-center gap-2 text-sm text-gray-600">
-                        <span className="w-4 h-4 rounded-full bg-[#F5C518] flex items-center justify-center flex-shrink-0">
-                          <svg viewBox="0 0 10 10" width="8" height="8" fill="none" stroke="#1C1C2E" strokeWidth="2" strokeLinecap="round">
+                        <span className="w-4 h-4 rounded-full bg-[#F4A906] flex items-center justify-center flex-shrink-0">
+                          <svg viewBox="0 0 10 10" width="8" height="8" fill="none" stroke="#2A1812" strokeWidth="2" strokeLinecap="round">
                             <polyline points="1.5,5 4,7.5 8.5,2.5" />
                           </svg>
                         </span>
@@ -108,7 +108,7 @@ export default function NosServicesPage() {
       {/* ── CTA ── */}
       <section className="bg-[#F5E2CC] py-14 px-6 md:px-12 text-center">
         <Reveal>
-          <h2 className="text-2xl font-black text-[#1C1C2E] mb-4">
+          <h2 className="text-2xl font-black text-[#2A1812] mb-4">
             Un projet en tête ?
           </h2>
           <p className="text-sm text-gray-600 mb-8 max-w-md mx-auto">
@@ -116,7 +116,7 @@ export default function NosServicesPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-[#1A3DAA] hover:bg-[#0E2A88] text-white font-bold text-xs tracking-widest px-10 py-4 rounded-full transition-all hover:scale-[1.04]"
+            className="inline-block bg-[#D9591A] hover:bg-[#A8400F] text-white font-bold text-xs tracking-widest px-10 py-4 btn-3d"
           >
             NOUS CONTACTER
           </Link>

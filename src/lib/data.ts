@@ -37,6 +37,7 @@ export const BOOKS: Book[] = [
     slug: "voyage-entre-ciel-et-terre",
     title: "Voyage entre Ciel et Terre",
     author: "Grégoire Nguédi",
+    image: "/images/cover_voyage_entre_ciel-et_terre.jpg",
     genre: "Roman",
     year: 2012,
     publisher: "L'Harmattan / Cameroun",
@@ -81,6 +82,7 @@ export const BOOKS: Book[] = [
     slug: "le-bal-des-sept-collines",
     title: "Le bal des sept collines",
     author: "Grégoire Nguédi",
+    image: "/images/couverture_bal_des7collines.jpg",
     genre: "Roman",
     year: 2023,
     publisher: "L'Harmattan / Cameroun",
@@ -95,7 +97,7 @@ export const BOOKS: Book[] = [
     genre: "BD",
     year: 2023,
     publisher: "Nguedi jm Éditions",
-    coverColor: "#1A3DAA",
+    coverColor: "#D9591A",
     description:
       "Une bande dessinée dynamique où un jeune homme et une historienne parcourent la ville à la découverte de ses trésors cachés. Un compagnon de l'univers Epsum Challenge.",
   },
@@ -107,7 +109,7 @@ export const BOOKS: Book[] = [
     genre: "Essai",
     year: 2024,
     publisher: "Nguedi jm Éditions",
-    price: 20000,
+    price: 10000,
     preface: "Edou Alo'o Cyrill",
     postPreface: "Kongo Elanga Désiré",
     description:
@@ -163,7 +165,7 @@ export const EPSUM = {
     "Le jeu consiste en une promenade éducative (Histoire et traditions) dans les quartiers de la ville de Epsum (Yaoundé). Le promeneur, au hasard de ses déplacements, sera imprégné de la culture de Epsum et fera l'acquisition de terrains et de propriétés historiques. Il rencontrera à coup sûr d'autres promeneurs qui convoiteront lesdits terrains, ou qui en seront déjà propriétaires. Sa culture générale et ses connaissances sur l'Histoire et les traditions de la ville seront ses principaux atouts. Il devra aussi et surtout suivre les indications du Nkunkuma afin d'éviter les pièges sur son parcours.",
   goal:
     "En fin de compte, le promeneur qui maîtrise le mieux l'Histoire et les traditions de Epsum (Yaoundé) sera reconnu Zomloa des Zomloa — grand gardien des traditions.",
-  price: 12500,
+  price: 20000,
 };
 
 // ── Epsum Challenge Univers (ECU) ──
@@ -208,21 +210,21 @@ export const SERVICES = [
     id: "correction",
     name: "Correction",
     description: "Correction orthographique, grammaticale et syntaxique pour un texte impeccable.",
-    color: "#8B7A1A",
+    color: "#9C6A10",
     icon: "x",
   },
   {
     id: "traduction",
     name: "Traduction",
     description: "Traduction littéraire de qualité, respectant le style et l'âme de l'œuvre originale.",
-    color: "#1A3DAA",
+    color: "#D9591A",
     icon: "Aa",
   },
   {
     id: "edition",
     name: "Édition",
     description: "Accompagnement complet de la mise en page à l'impression, pour donner vie à votre livre.",
-    color: "#5D4E75",
+    color: "#8A5530",
     icon: "book",
   },
 ];

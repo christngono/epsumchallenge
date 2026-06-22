@@ -1,20 +1,30 @@
 @import "tailwindcss";
 
 @theme {
-  /* ── Palette Nguedi JM Éditions ── */
-  --color-yellow:       #F5C518;
-  --color-yellow-dark:  #DBA900;
-  --color-blue-logo:    #1A3DAA;
-  --color-blue-dark:    #0E2A88;
-  --color-beige:        #F5E2CC;
-  --color-dark-red:     #7D1E1E;
-  --color-dark-green:   #2D5A3D;
-  --color-red-svc:      #C0392B;
-  --color-gold-svc:     #8B7A1A;
-  --color-indigo:       #3D3B8E;
-  --color-purple:       #6B5B9A;
-  --color-lavender:     #C4B5D5;
-  --color-dark-footer:  #1C1C2E;
+  /* ── Palette Nguedi JM Éditions — charte « Afritude » ──
+     Inspirée de couleurs chaudes africaines : ambre, terre cuite,
+     ocre, brun espresso et sable. */
+  --color-yellow:       #F4A906; /* ambre doré (accent principal)      */
+  --color-yellow-dark:  #C5870A; /* ambre profond                      */
+  --color-blue-logo:    #D9591A; /* terre cuite / orange afritude      */
+  --color-blue-dark:    #A8400F; /* terre cuite profonde               */
+  --color-beige:        #F5E2CC; /* sable clair                        */
+  --color-dark-red:     #7D1E1E; /* rouge brique                       */
+  --color-dark-green:   #2D5A3D; /* vert kente (touche)                */
+  --color-red-svc:      #C0392B; /* rouge chaud                        */
+  --color-gold-svc:     #9C6A10; /* or olive                           */
+  --color-indigo:       #BE4A18; /* ocre brûlé                         */
+  --color-purple:       #C66E2E; /* ocre cuivré                        */
+  --color-lavender:     #EBC79E; /* sable doré                         */
+  --color-dark-footer:  #2A1812; /* brun espresso                      */
+
+  /* Alias sémantiques afritude */
+  --color-afritude-amber:     #F4A906;
+  --color-afritude-orange:    #D9591A;
+  --color-afritude-terracotta:#A8400F;
+  --color-afritude-brown:     #2A1812;
+  --color-afritude-sand:      #F4E6CC;
+  --color-afritude-cream:     #FBF1DC;
 
   /* ── Typographie ── */
   --font-sans:    var(--font-montserrat);
@@ -27,23 +37,24 @@ html {
 
 body {
   font-family: var(--font-montserrat), 'Montserrat', sans-serif;
-  color: #1A1A1A;
-  background-color: #a83130;
+  color: #241510;
+  /* Fond sable chaud — supprime les zones blanches du site */
+  background-color: #F4E6CC;
   overflow-x: hidden;
   position: relative;
 }
 
-/* ── Motif de fond du site — image EPSUM ── */
+/* ── Motif africain répété sur tout le site (tuile) ── */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: url('/images/fond_EPSUM.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-image: url('/images/motifs_epsum.svg');
+  background-repeat: repeat;
+  background-size: 420px auto;
+  background-position: top left;
   background-attachment: fixed;
-  opacity: 0.08;
+  opacity: 0.28;
   pointer-events: none;
   z-index: 0;
 }
@@ -96,7 +107,7 @@ main, header, nav, footer, section {
   to { background-position: 200% center; }
 }
 .hero-shine {
-  background: linear-gradient(100deg, #F5C518 25%, #FFF7D6 50%, #F5C518 75%);
+  background: linear-gradient(100deg, #F4A906 25%, #FFF7D6 50%, #F4A906 75%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   background-clip: text;
@@ -125,8 +136,8 @@ main, header, nav, footer, section {
     animation: none !important;
   }
   .hero-shine {
-    -webkit-text-fill-color: #F5C518;
-    color: #F5C518;
+    -webkit-text-fill-color: #F4A906;
+    color: #F4A906;
   }
 }
 
@@ -138,7 +149,7 @@ main, header, nav, footer, section {
 .tw-cursor {
   display: inline-block;
   margin-left: 2px;
-  color: #F5C518;
+  color: #F4A906;
   font-weight: 400;
   animation: twBlink 1s steps(1) infinite;
 }
@@ -153,12 +164,11 @@ main, header, nav, footer, section {
   width: 100%;
   background-image: repeating-linear-gradient(
     90deg,
-    #F5C518 0 18px,
-    #1A3DAA 18px 36px,
+    #F4A906 0 18px,
+    #D9591A 18px 36px,
     #7D1E1E 36px 54px,
     #2D5A3D 54px 72px
   );
-  animation: kenteSlide 3.5s linear infinite;
 }
 
 /* ── Dégradé coloré animé (fonds dynamiques) ── */
@@ -185,7 +195,26 @@ main, header, nav, footer, section {
 /* ── Scrollbar discrète ── */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #f5e2cc; }
-::-webkit-scrollbar-thumb { background: #1A3DAA; border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: #D9591A; border-radius: 3px; }
+
+/* ── Boutons 3D (effet relief / enfoncement au clic) ── */
+.btn-3d {
+  border-radius: 10px !important;
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.35);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.2s ease;
+}
+.btn-3d:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.35);
+}
+.btn-3d:active {
+  transform: translate(5px, 5px);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-3d { transition: background-color 0.2s ease; }
+}
 
 /* ── Transition de pages : vagues de livres ── */
 .page-transition-overlay {
