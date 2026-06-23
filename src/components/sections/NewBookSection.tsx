@@ -3,11 +3,13 @@ import Link from "next/link";
 import { NEW_BOOK_EXCERPT } from "@/lib/data";
 import Reveal from "@/components/motion/Reveal";
 import Parallax from "@/components/motion/Parallax";
+import TribalCard from "@/components/ui/TribalCard";
 
 export default function NewBookSection() {
   return (
     <section className="bg-transparent py-20 px-6 md:px-12 border-t border-[#ebe0d5] overflow-hidden">
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
+      <TribalCard className="max-w-5xl mx-auto">
+      <div className="flex flex-col md:flex-row items-center gap-12">
 
         <Reveal direction="right" className="flex-shrink-0 w-[200px] md:w-[240px]">
           <Parallax offset={40}>
@@ -20,7 +22,7 @@ export default function NewBookSection() {
                 alt="Le Contrôle de la gestion des matières"
                 width={240}
                 height={320}
-                className="w-full rounded shadow-2xl object-cover"
+                className="w-full rounded object-cover border-4 border-[#7D1E1E] shadow-[6px_6px_0_rgba(125,30,30,0.3)]"
               />
             </div>
           </Parallax>
@@ -60,6 +62,7 @@ export default function NewBookSection() {
         </Reveal>
 
       </div>
+      </TribalCard>
     </section>
   );
 }

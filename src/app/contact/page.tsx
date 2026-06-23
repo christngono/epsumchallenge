@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Reveal from "@/components/motion/Reveal";
+import TribalCard from "@/components/ui/TribalCard";
 
 const SUBJECTS = [
   "Commander un livre",
@@ -50,6 +51,7 @@ export default function ContactPage() {
 
           {/* ── Formulaire ── */}
           <Reveal direction="right">
+            <TribalCard variant="terracotta">
             <h2 className="text-xl font-bold text-[#2A1812] mb-6">Envoyer un message</h2>
             {sent ? (
               <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
@@ -121,10 +123,12 @@ export default function ContactPage() {
                 </button>
               </form>
             )}
+            </TribalCard>
           </Reveal>
 
           {/* ── Coordonnées ── */}
           <Reveal direction="left" delay={0.1}>
+            <TribalCard variant="amber">
             <h2 className="text-xl font-bold text-[#2A1812] mb-6">Nos coordonnées</h2>
             <div className="flex flex-col gap-8">
 
@@ -201,6 +205,7 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
+            </TribalCard>
           </Reveal>
 
         </div>

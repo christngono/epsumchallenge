@@ -4,6 +4,7 @@ import { FOUNDER } from "@/lib/data";
 import Reveal from "@/components/motion/Reveal";
 import Parallax from "@/components/motion/Parallax";
 import Counter from "@/components/motion/Counter";
+import TribalCard from "@/components/ui/TribalCard";
 
 const STATS = [
   { to: 6, suffix: "+", label: "Romans publiés" },
@@ -13,8 +14,9 @@ const STATS = [
 
 export default function AuthorSection() {
   return (
-    <section className="bg-[#F7EEDD] py-20 px-6 md:px-12 border-t border-[#ebe0d5] overflow-hidden">
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-16">
+    <section className="bg-transparent py-20 px-6 md:px-12 border-t border-[#ebe0d5] overflow-hidden">
+      <TribalCard className="max-w-5xl mx-auto">
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-16">
 
         <Reveal direction="right" className="flex-shrink-0 w-[220px] md:w-[260px]">
           <Parallax offset={50}>
@@ -23,7 +25,7 @@ export default function AuthorSection() {
               alt="Collection Grégoire Nguédi"
               width={260}
               height={320}
-              className="w-full rounded-md shadow-2xl object-cover"
+              className="w-full rounded-md object-cover border-4 border-[#7D1E1E] shadow-[6px_6px_0_rgba(125,30,30,0.3)]"
             />
           </Parallax>
         </Reveal>
@@ -64,6 +66,7 @@ export default function AuthorSection() {
         </Reveal>
 
       </div>
+      </TribalCard>
     </section>
   );
 }

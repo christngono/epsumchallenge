@@ -6,6 +6,7 @@ import Reveal from "@/components/motion/Reveal";
 import Parallax from "@/components/motion/Parallax";
 import Counter from "@/components/motion/Counter";
 import { Stagger, StaggerItem } from "@/components/motion/Stagger";
+import TribalCard from "@/components/ui/TribalCard";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -53,7 +54,8 @@ export default function NguediJmEditionsPage() {
 
       {/* ── Le fondateur ── */}
       <section className="bg-transparent py-20 px-6 md:px-12 overflow-hidden">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-start gap-14">
+        <TribalCard variant="terracotta" className="max-w-5xl mx-auto">
+        <div className="flex flex-col md:flex-row items-start gap-14">
           <Reveal direction="right" className="flex-shrink-0 w-[220px] md:w-[260px]">
             <Parallax offset={50}>
               <Image
@@ -61,7 +63,7 @@ export default function NguediJmEditionsPage() {
                 alt="Grégoire Nguédi — Collection"
                 width={260}
                 height={320}
-                className="w-full rounded-lg shadow-2xl object-cover"
+                className="w-full rounded-lg object-cover border-4 border-[#7D1E1E] shadow-[6px_6px_0_rgba(125,30,30,0.3)]"
               />
             </Parallax>
           </Reveal>
@@ -96,6 +98,7 @@ export default function NguediJmEditionsPage() {
             </div>
           </Reveal>
         </div>
+        </TribalCard>
       </section>
 
       {/* ── Nos compétences / services ── */}
@@ -129,9 +132,10 @@ export default function NguediJmEditionsPage() {
 
       {/* ── Unités autonomes T.E.N ── */}
       <section className="bg-transparent py-20 px-6 md:px-12">
-        <div className="max-w-5xl mx-auto">
+        <TribalCard variant="amber" className="max-w-5xl mx-auto">
+        <div>
           <Reveal>
-            <p className="text-[10px] font-bold tracking-[4px] text-[#D9591A] uppercase mb-3 text-center">
+            <p className="text-[10px] font-bold tracking-[4px] text-[#C5870A] uppercase mb-3 text-center">
               Test d&apos;Évaluation Nguédi
             </p>
             <h2 className="text-2xl md:text-3xl font-bold text-[#2A1812] mb-3 text-center" style={{ fontFamily: "var(--font-playfair)" }}>
@@ -152,6 +156,7 @@ export default function NguediJmEditionsPage() {
             ))}
           </Stagger>
         </div>
+        </TribalCard>
       </section>
 
       {/* ── Catalogue ── */}

@@ -2,7 +2,10 @@ import Link from "next/link";
 import { SERVICES, EDITIONS } from "@/lib/data";
 import Reveal from "@/components/motion/Reveal";
 import { Stagger, StaggerItem } from "@/components/motion/Stagger";
+import TribalCard from "@/components/ui/TribalCard";
 import type { Metadata } from "next";
+
+const CARD_VARIANTS = ["terracotta", "amber", "green", "red", "brown", "terracotta"] as const;
 
 export const metadata: Metadata = {
   title: "Nos Services — Nguedi JM Éditions",
@@ -66,13 +69,11 @@ export default function NosServicesPage() {
       {/* ── Grille services ── */}
       <section className="bg-transparent py-16 px-6 md:px-12">
         <Stagger className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8" stagger={0.1}>
-          {SERVICES.map((svc) => {
+          {SERVICES.map((svc, i) => {
             const detail = SERVICE_DETAILS[svc.id];
             return (
-              <StaggerItem
-                key={svc.id}
-                className="border border-[#ebe0d5] rounded-lg p-8 hover:shadow-lg hover:border-[#F4A906] transition-all bg-white"
-              >
+              <StaggerItem key={svc.id}>
+                <TribalCard variant={CARD_VARIANTS[i % CARD_VARIANTS.length]} compact className="h-full">
                 <div className="flex items-center gap-4 mb-5">
                   <div
                     className="w-14 h-14 rounded-lg flex items-center justify-center flex-shrink-0"
@@ -99,6 +100,7 @@ export default function NosServicesPage() {
                     ))}
                   </ul>
                 )}
+                </TribalCard>
               </StaggerItem>
             );
           })}

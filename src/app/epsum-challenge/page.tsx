@@ -4,6 +4,7 @@ import { EPSUM, ECU } from "@/lib/data";
 import Reveal from "@/components/motion/Reveal";
 import Parallax from "@/components/motion/Parallax";
 import { Stagger, StaggerItem } from "@/components/motion/Stagger";
+import TribalCard from "@/components/ui/TribalCard";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -83,7 +84,8 @@ export default function EpsumChallengePage() {
 
       {/* ── Présentation ── */}
       <section className="bg-transparent py-20 px-6 md:px-12 overflow-hidden">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-14">
+        <TribalCard variant="green" className="max-w-5xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center gap-14">
           <Reveal direction="right" className="flex-shrink-0 w-[240px] md:w-[300px]">
             <Parallax offset={40}>
               <Image
@@ -91,7 +93,7 @@ export default function EpsumChallengePage() {
                 alt="Boîte Epsum Challenge"
                 width={300}
                 height={380}
-                className="w-full rounded-lg shadow-2xl object-cover"
+                className="w-full rounded-lg object-cover border-4 border-[#1F3F2B] shadow-[6px_6px_0_rgba(31,63,43,0.3)]"
               />
             </Parallax>
           </Reveal>
@@ -120,6 +122,7 @@ export default function EpsumChallengePage() {
             </div>
           </Reveal>
         </div>
+        </TribalCard>
       </section>
 
       {/* ── Comment ça marche ── */}
@@ -178,9 +181,10 @@ export default function EpsumChallengePage() {
 
       {/* ── Epsum Challenge Univers ── */}
       <section className="bg-transparent py-20 px-6 md:px-12">
-        <div className="max-w-5xl mx-auto">
+        <TribalCard variant="red" className="max-w-5xl mx-auto">
+        <div>
           <Reveal>
-            <p className="text-[10px] font-bold tracking-[4px] text-[#D9591A] uppercase mb-3 text-center">
+            <p className="text-[10px] font-bold tracking-[4px] text-[#C0392B] uppercase mb-3 text-center">
               Depuis {ECU.since}
             </p>
             <h2
@@ -207,6 +211,7 @@ export default function EpsumChallengePage() {
             ))}
           </Stagger>
         </div>
+        </TribalCard>
       </section>
 
       {/* ── CTA ── */}
